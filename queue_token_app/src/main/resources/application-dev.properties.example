@@ -1,0 +1,24 @@
+# =========================
+# Application Name & Server
+# =========================
+spring.application.name=queue_token_app
+server.servlet.context-path=/qta-api
+
+# =========================
+# JPA common settings
+# =========================
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.hibernate.ddl-auto=update
+
+# =========================
+# Active Profile
+# =========================
+spring.profiles.active=dev
+
+# =========================
+# DEV Database Configuration
+# =========================
+spring.datasource.url=jdbc:postgresql://<SUPABASE_HOST>:5432/<DB_NAME>
+spring.datasource.username=YOUR_DB_USERNAME
+spring.datasource.password=YOUR_DB_PASSWORD

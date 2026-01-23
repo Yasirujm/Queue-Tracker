@@ -1,10 +1,27 @@
+# =========================
+# Help / Docs
+# =========================
 HELP.md
+
+# =========================
+# Build / Target directories
+# =========================
+# Maven / Gradle
 target/
+build/
+.gradle/
 .mvn/wrapper/maven-wrapper.jar
+
+# Include specific src builds
 !**/src/main/**/target/
 !**/src/test/**/target/
+!**/src/main/**/build/
+!**/src/test/**/build/
 
-### STS ###
+# =========================
+# IDEs
+# =========================
+# STS / Spring Tools
 .apt_generated
 .classpath
 .factorypath
@@ -13,44 +30,24 @@ target/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
-.idea
+# IntelliJ IDEA
+.idea/
 *.iws
 *.iml
 *.ipr
 
-### NetBeans ###
+# NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### VS Code ###
+# VS Code
 .vscode/
 
 # =========================
-# Maven / Gradle
-# =========================
-target/
-build/
-.gradle/
-
-# =========================
-# IDEs
-# =========================
-.idea/
-.vscode/
-*.iml
-*.classpath
-*.project
-*.settings/
-
-# =========================
-# OS files
+# OS Files
 # =========================
 .DS_Store
 Thumbs.db
@@ -65,12 +62,20 @@ logs/
 # Environment & Secrets
 # =========================
 .env
+
+# Ignore actual property files with sensitive info
 application.properties
+application-*.properties
 application.yml
 application-*.yml
 
+# But allow safe templates for sharing
+!application-dev.properties.example
+!application-test.properties.example
+!application-prod.properties.example
+
 # =========================
-# Test & Coverage
+# Test / Coverage
 # =========================
 /coverage/
 *.exec
@@ -79,4 +84,3 @@ application-*.yml
 # Others
 # =========================
 out/
-
