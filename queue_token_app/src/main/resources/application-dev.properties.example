@@ -1,24 +1,74 @@
 # =========================
-# Application Name & Server
+# DEV Environment Configuration (EXAMPLE)
+# =========================
+# This is a template file for developers
+# Copy this file to application-dev.properties and fill in your actual credentials
+# NEVER commit application-dev.properties with real credentials to version control
+
+# =========================
+# Application Configuration
 # =========================
 spring.application.name=queue_token_app
+
+# =========================
+# Server Configuration
+# =========================
+server.port=8080
 server.servlet.context-path=/qta-api
 
 # =========================
-# JPA common settings
+# Database Configuration
 # =========================
+# Replace with your actual Supabase or PostgreSQL credentials
+spring.datasource.url=jdbc:postgresql://<YOUR_SUPABASE_HOST>:5432/<YOUR_DB_NAME>
+spring.datasource.username=<YOUR_DB_USERNAME>
+spring.datasource.password=<YOUR_DB_PASSWORD>
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+# Example for Supabase:
+# spring.datasource.url=jdbc:postgresql://db.xxxxxxxxxxxxx.supabase.co:5432/postgres
+# spring.datasource.username=postgres
+# spring.datasource.password=your_password_here
+
+# =========================
+# JPA/Hibernate Configuration
+# =========================
+spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
-spring.jpa.hibernate.ddl-auto=update
+spring.jpa.properties.hibernate.format_sql=true
+
+# =========================
+# Connection Pool Configuration
+# =========================
+spring.datasource.hikari.maximum-pool-size=10
+spring.datasource.hikari.minimum-idle=5
+spring.datasource.hikari.connection-timeout=30000
+
+# =========================
+# Jackson Configuration
+# =========================
+spring.jackson.serialization.write-dates-as-timestamps=false
+spring.jackson.time-zone=UTC
+
+# =========================
+# Logging Configuration
+# =========================
+logging.level.com.queueapp=DEBUG
+logging.level.org.springframework.web=DEBUG
+logging.level.org.hibernate.SQL=DEBUG
+logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
+
+# =========================
+# Dev-specific Settings
+# =========================
+# Enable detailed error messages in dev
+server.error.include-message=always
+server.error.include-binding-errors=always
+server.error.include-stacktrace=always
+server.error.include-exception=true
 
 # =========================
 # Active Profile
 # =========================
 spring.profiles.active=dev
-
-# =========================
-# DEV Database Configuration
-# =========================
-spring.datasource.url=jdbc:postgresql://<SUPABASE_HOST>:5432/<DB_NAME>
-spring.datasource.username=YOUR_DB_USERNAME
-spring.datasource.password=YOUR_DB_PASSWORD
