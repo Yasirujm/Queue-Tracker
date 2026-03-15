@@ -13,8 +13,6 @@ export default function HomePage() {
       <SliderHero />
       <OffersCarousel />
       <TopDestinations />
-      <SignInPage/>
-      <CreateAccountPage/>
       
 
       {/* Constrained content with padding BELOW slider */}
