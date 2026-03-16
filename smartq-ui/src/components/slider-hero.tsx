@@ -16,21 +16,21 @@ type Slide = {
 
 const SLIDES: Slide[] = [
   { 
-    src: "/images/queue/queue-hero-01.jpg", 
+    src: "/public/images/Qtracker bannner (1).png", 
     alt: "People waiting in organized queue",
     title: "QueueSmart",
     slogan: "Skip The Line, Save Your Time",
     buttonText: "Book Token Now"
   },
   { 
-    src: "/images/queue/queue-hero-02.jpg", 
+    src: "/public/images/Qtracker bannner (2).png", 
     alt: "Digital queue display at hospital",
     title: "QueueSmart",
     slogan: "Digital Queue Management Made Easy",
     buttonText: "Join Queue Virtually"
   },
   { 
-    src: "/images/queue/queue-hero-03.jpg", 
+    src: "/public/images/Qtracker bannner (3).png", 
     alt: "Customer getting served efficiently",
     title: "QueueSmart",
     slogan: "Smart Solutions for Busy Businesses",
@@ -79,7 +79,7 @@ export default function QueueHero() {
   const currentSlide = slides[index];
 
   return (
-    <section className="relative w-full bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800">
+    <section className="relative w-full .,">
       {/* Responsive height */}
       <div className="relative w-full h-[60vh] md:aspect-[16/6] md:h-auto overflow-hidden">
         {slides.map((s, i) => (
@@ -91,7 +91,7 @@ export default function QueueHero() {
             aria-hidden={i !== index}
           >
             {/* Fallback gradient background if image not available */}
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-900" />
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-700/90 to-blue-900/90" />
             <Image
               src={s.src}
               alt={s.alt}
@@ -100,7 +100,6 @@ export default function QueueHero() {
               sizes="100vw"
               className="object-cover mix-blend-overlay opacity-70"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 via-blue-800/50 to-blue-900/30" />
             <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-blue-900/90 via-blue-900/50 to-transparent" />
           </div>
         ))}
