@@ -14,9 +14,11 @@ import java.util.UUID;
 @Builder
 public class UserResponse {
 
-    private UUID userId;
+    private Long userId;
+    private String name;
     private String username;
     private String email;
+    private String role;
     private LocalDateTime createdAt;
     private String role;
 }

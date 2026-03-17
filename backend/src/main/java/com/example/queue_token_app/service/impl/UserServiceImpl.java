@@ -39,9 +39,11 @@ public class UserServiceImpl implements UserService {
 
         // Create new user entity
         User user = new User();
+        user.setName(signUpRequest.getName());
         user.setUsername(signUpRequest.getUsername());
         user.setEmail(signUpRequest.getEmail());
         user.setPasswordHash(passwordEncoder.encode(signUpRequest.getPassword()));
+        user.setRole(signUpRequest.getRole());
 
         // Save user to database
         User savedUser = userRepository.save(user);
@@ -67,8 +69,10 @@ public class UserServiceImpl implements UserService {
     private UserResponse convertToResponse(User user) {
         return UserResponse.builder()
                 .userId(user.getUserId())
+                .name(user.getName())
                 .username(user.getUsername())
                 .email(user.getEmail())
+                .role(user.getRole())
                 .createdAt(user.getCreatedAt())
                 .build();
     }
