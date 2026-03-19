@@ -152,4 +152,8 @@ public class CustomerController {
         
         return ResponseEntity.ok(response);
     }
+    @GetMapping("/test")
+    public ResponseEntity<String> test() {
+        return ResponseEntity.ok("Customer API is working!");
+    }
 }
