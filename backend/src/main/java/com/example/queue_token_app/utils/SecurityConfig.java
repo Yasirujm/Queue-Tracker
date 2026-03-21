@@ -34,11 +34,12 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         // Public endpoints - no authentication required
                         .requestMatchers(
-                                "/api/v1/customers/register",
-                                "/api/v1/users/signup",
-                                "/api/v1/users/login",
-                                "/api/v1/users/check-email",
-                                "/api/v1/users/check-username"
+                                "/v1/customers/register",
+                                "/v1/users/signup",
+                                "/v1/users/login",
+                                "/v1/users/check-email",
+                                "/v1/users/check-username",
+                                "/v1/queues/active"
                         ).permitAll()
                         // All other endpoints require authentication
                         .anyRequest().authenticated()
