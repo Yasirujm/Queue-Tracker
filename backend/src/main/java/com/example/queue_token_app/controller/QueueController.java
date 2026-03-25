@@ -1,8 +1,6 @@
 package com.example.queue_token_app.controller;
 
-import com.example.queue_token_app.dto.ApiResponse;
-import com.example.queue_token_app.dto.ActiveQueueResponse;
-import com.example.queue_token_app.dto.ServiceQueueResponse;
+import com.example.queue_token_app.dto.*;
 import com.example.queue_token_app.service.QueueService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -28,6 +26,31 @@ public class QueueController {
                         "Active queues fetched successfully",
                         queues
                 )
+        );
+    }
+
+    @PostMapping("/join")
+    public ResponseEntity<ApiResponse<JoinQueueResponse>> joinQueue(
+            @RequestBody JoinQueueRequest request) {
+
+        return ResponseEntity.ok(
+                ApiResponse.success(
+                        "Token generated successfully",
+                        queueService.joinQueue(request)
+                )
+        );
+    }
+
+    @GetMapping("/{queueId}/next-token")
+    public ResponseEntity<ApiResponse<NextTokenResponse>> getNextToken(@PathVariable Integer queueId) {
+        NextTokenResponse response = queueService.getNextToken(queueId);
+
+        return ResponseEntity.ok(
+                ApiResponse.<NextTokenResponse>builder()
+                        .success(true)
+                        .message("Next token fetched successfully")
+                        .data(response)
+                        .build()
         );
     }
 }
