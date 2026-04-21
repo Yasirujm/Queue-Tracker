@@ -41,7 +41,10 @@ public class SecurityConfig {
                                 "/v1/users/check-username",
                                 "/v1/queues/active",
                                 "/v1/queues/join",
-                                "/v1/queues/{queueId}/next-token"
+                                "/v1/queues/{queueId}/next-token",
+                                "/v1/queues/{queueId}/position/{userId}",
+                                "/v1/queues/{queueId}/skip",
+                                "/v1/queues/reports/daily"
                         ).permitAll()
                         // All other endpoints require authentication
                         .anyRequest().authenticated()

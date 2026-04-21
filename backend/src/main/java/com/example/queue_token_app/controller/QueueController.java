@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -51,6 +52,40 @@ public class QueueController {
                         .message("Next token fetched successfully")
                         .data(response)
                         .build()
+        );
+    }
+
+    @GetMapping("/{queueId}/position/{userId}")
+    public ResponseEntity<ApiResponse<QueuePositionResponse>> getQueuePosition(
+            @PathVariable Integer queueId,
+            @PathVariable Integer userId) {
+
+        QueuePositionResponse response = queueService.getQueuePosition(queueId, userId);
+
+        return ResponseEntity.ok(
+                ApiResponse.success("Queue position retrieved successfully", response)
+        );
+    }
+
+    @PutMapping("/{queueId}/skip")
+    public ResponseEntity<ApiResponse<SkipCustomerResponse>> skipCustomer(@PathVariable Integer queueId) {
+        SkipCustomerResponse response = queueService.skipCustomer(queueId);
+
+        return ResponseEntity.ok(
+                ApiResponse.success("Customer skipped successfully", response)
+        );
+    }
+
+    @GetMapping("/reports/daily")
+    public ResponseEntity<ApiResponse<DailyReportResponse>> getDailyReport(
+            @RequestParam(required = false) String date) {
+
+        LocalDate reportDate = (date != null) ? LocalDate.parse(date) : null;
+
+        DailyReportResponse response = queueService.getDailyReport(reportDate);
+
+        return ResponseEntity.ok(
+                ApiResponse.success("Daily report fetched successfully", response)
         );
     }
 }
