@@ -36,4 +36,12 @@ public interface QueueRepository extends JpaRepository<Queue, Long> {
     Integer findLastTokenNumber(Long queueId);
 
     Optional<Queue> findByIdAndStatus(Integer id, String status);
+
+    @Query("""
+        SELECT q
+        FROM Queue q
+        WHERE q.id = :queueId
+          AND q.status = 'ACTIVE'
+    """)
+    Optional<Queue> findActiveQueue(Integer queueId);
 }
