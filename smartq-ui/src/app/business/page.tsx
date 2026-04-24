@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
+import { useState } from "react";
 import {
   Search,
   MapPin,
@@ -10,14 +10,13 @@ import {
   X,
   Calendar,
   Star,
-  CheckCircle,
   AlertCircle,
   Phone,
   Mail,
   MessageSquare,
   Shield,
-} from 'lucide-react';
-import { useRouter } from 'next/navigation';
+} from "lucide-react";
+import { useRouter } from "next/navigation";
 
 interface Business {
   id: number;
@@ -25,7 +24,7 @@ interface Business {
   location: string;
   rating: number;
   reviews: number;
-  businessType: 'Health' | 'Food' | 'Automobile' | 'Bank' | 'Government';
+  businessType: "Health" | "Food" | "Automobile" | "Bank" | "Government";
   currentQueue: number;
   avgWaitTime: string;
   image: string;
@@ -49,14 +48,13 @@ interface FilterState {
 }
 
 const QueueSelectionPage: React.FC = () => {
-  const router = useRouter();
-  const [sortBy, setSortBy] = useState<string>('Best match');
+   const router = useRouter();
+  const [sortBy, setSortBy] = useState<string>("Best match");
   const [showMobileFilters, setShowMobileFilters] = useState<boolean>(false);
-  const [selectedLocation, setSelectedLocation] = useState<string>('Colombo');
-  const [selectedDate, setSelectedDate] = useState<string>('Today');
-  const [selectedTime, setSelectedTime] = useState<string>('Anytime');
-  const [searchQuery, setSearchQuery] = useState<string>('');
-
+  const [selectedLocation, setSelectedLocation] = useState<string>("Colombo");
+  const [selectedDate, setSelectedDate] = useState<string>("Today");
+  const [selectedTime, setSelectedTime] = useState<string>("Anytime");
+  const [searchQuery, setSearchQuery] = useState<string>("");
   const [selectedFilters, setSelectedFilters] = useState<FilterState>({
     health: false,
     food: false,
@@ -172,7 +170,7 @@ const QueueSelectionPage: React.FC = () => {
 
   const handleBusinessClick = (businessId: number) => {
     //router.push(`/business/${businessId}`);
-    router.push(`/hotel-details?id=${businessId}`); // Temporary redirection to hotel details for demo
+    router.push(`/book-token?business=${businessId}`);; // Temporary redirection to hotel details for demo
   };
 
   const getBusinessTypeColor = (type: Business['businessType']) => {
