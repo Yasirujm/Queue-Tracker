@@ -5,7 +5,7 @@ import Image from "next/image";
 const TOP_BUSINESSES = [
   { 
     title: "Colombo General Hospital", 
-    image: "/images/hotels/Cinnamon-Bey-Beruwala.jpg", 
+    image: "/images/National_Hospital_Colombo_-_panoramio.jpg", 
     subtitle: "Emergency & OPD Services",
     type: "Health",
     rating: 4.6,
@@ -14,7 +14,7 @@ const TOP_BUSINESSES = [
   },
   { 
     title: "KFC Express", 
-    image: "/images/hotels/Cinnamon-Bey-Beruwala.jpg", 
+    image: "/images/KFC 1.jpg", 
     subtitle: "Fast Food Restaurant",
     type: "Food",
     rating: 4.2,
@@ -23,7 +23,7 @@ const TOP_BUSINESSES = [
   },
   { 
     title: "Toyota Service Center", 
-    image: "/images/hotels/Cinnamon-Bey-Beruwala.jpg", 
+    image: "/images/Toyota car service.jpg", 
     subtitle: "Car Service & Repair",
     type: "Automobile",
     rating: 4.7,
@@ -32,7 +32,7 @@ const TOP_BUSINESSES = [
   },
   { 
     title: "People's Bank", 
-    image: "/images/hotels/Cinnamon-Bey-Beruwala.jpg", 
+    image: "/images/peoples bank.jpg", 
     subtitle: "Banking Services",
     type: "Bank",
     rating: 4.0,
@@ -41,7 +41,7 @@ const TOP_BUSINESSES = [
   },
   { 
     title: "DMV Office", 
-    image: "/images/hotels/Cinnamon-Bey-Beruwala.jpg", 
+    image: "/images/DMV Office.jpg", 
     subtitle: "License & Registration",
     type: "Government",
     rating: 3.8,
@@ -50,7 +50,7 @@ const TOP_BUSINESSES = [
   },
   { 
     title: "Dental Care Clinic", 
-    image: "/images/hotels/Cinnamon-Bey-Beruwala.jpg", 
+    image: "/images/dental care.jpg", 
     subtitle: "Dental Services",
     type: "Health",
     rating: 4.5,

@@ -16,7 +16,7 @@ export default function SignInPage() {
       className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 relative bg-cover bg-center"
       style={{
         backgroundImage:
-          "url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1920&q=80')",
+          "url('https://d2fi3g03kp79b8.cloudfront.net/uploads/Queue_Management_System_Hero_Banner_93dd9940e9.jpg')",
       }}
     >
       {/* Dark Overlay */}

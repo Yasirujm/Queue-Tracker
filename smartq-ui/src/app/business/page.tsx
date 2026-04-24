@@ -80,7 +80,7 @@ const QueueSelectionPage: React.FC = () => {
       businessType: 'Health',
       currentQueue: 42,
       avgWaitTime: '15-25 mins',
-      image: '/images/hotels/Blue-Ocean-Resort.jpg',
+      image: '/images/Colombo_-_panoramio.jpg',
       amenities: ['Digital Queue', 'Emergency', 'Pharmacy', 'Parking'],
       openingHours: '8:00 AM - 8:00 PM',
       services: ['Consultation', 'Emergency', 'Lab Tests', 'Vaccination'],
@@ -95,7 +95,7 @@ const QueueSelectionPage: React.FC = () => {
       businessType: 'Food',
       currentQueue: 18,
       avgWaitTime: '8-12 mins',
-      image: '/public/images/Qtracker bannner (1).png',
+      image: '/images/KFC 1.jpg',
       amenities: ['Takeaway', 'Dine-in', 'Parking', 'WiFi'],
       openingHours: '10:00 AM - 10:00 PM',
       services: ['Fast Food', 'Beverages', 'Desserts'],
@@ -110,7 +110,7 @@ const QueueSelectionPage: React.FC = () => {
       businessType: 'Automobile',
       currentQueue: 9,
       avgWaitTime: '30-45 mins',
-      image: '/public/images/promotions/culture.jpg',
+      image: '/images/Toyota car service.jpg',
       amenities: ['Service', 'Repair', 'Wash', 'Parts'],
       openingHours: '8:30 AM - 5:30 PM',
       services: ['Oil Change', 'Tire Service', 'Car Wash', 'Repairs'],
@@ -125,7 +125,7 @@ const QueueSelectionPage: React.FC = () => {
       businessType: 'Bank',
       currentQueue: 27,
       avgWaitTime: '20-35 mins',
-      image: '/public/images/businesses/bank.jpg',
+      image: '/images/peoples bank.jpg',
       amenities: ['ATM', 'Digital Banking', 'Loans', 'Insurance'],
       openingHours: '9:00 AM - 3:00 PM',
       services: ['Deposit', 'Withdrawal', 'Account', 'Loan'],
@@ -140,7 +140,7 @@ const QueueSelectionPage: React.FC = () => {
       businessType: 'Government',
       currentQueue: 35,
       avgWaitTime: '45-60 mins',
-      image: '/public/images/businesses/government.jpg',
+      image: '/images/DMV Office.jpg',
       amenities: ['License', 'Registration', 'Documentation', 'Help Desk'],
       openingHours: '8:30 AM - 4:30 PM',
       services: ['License Renewal', 'Registration', 'Permits'],
@@ -155,7 +155,7 @@ const QueueSelectionPage: React.FC = () => {
       businessType: 'Health',
       currentQueue: 12,
       avgWaitTime: '10-20 mins',
-      image: '/public/images/rooms/room-1-2.jpg',
+      image: '/images/dental care.jpg',
       amenities: ['Checkup', 'Cleaning', 'X-Ray', 'Emergency'],
       openingHours: '9:00 AM - 6:00 PM',
       services: ['Consultation', 'Cleaning', 'Filling', 'Extraction'],
@@ -299,7 +299,7 @@ const QueueSelectionPage: React.FC = () => {
                 className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                 onClick={(e) => {
                   e.stopPropagation();
-                  router.push(`/book-token-form?business=${business.id}`);
+                  router.push(`/business-detail-page${business.id}`);
                 }}
               >
                 Book Token Now
