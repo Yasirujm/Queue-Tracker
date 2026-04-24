@@ -16,21 +16,21 @@ type Slide = {
 
 const SLIDES: Slide[] = [
   { 
-    src: "/images/Qtracker bannner (4)", 
+    src: "/images/Client-Blog-Banner-File-2025-02-24T115336.138.jpg", 
     alt: "People waiting in organized queue",
     title: "QueueSmart",
     slogan: "Skip The Line, Save Your Time",
     buttonText: "Book Token Now"
   },
   { 
-    src: "/images/Qtracker bannner (4)", 
+    src: "/images/Client-Blog-Banner-File-2025-02-24T115500.271-e1741924974111-1024x494.jpg", 
     alt: "Digital queue display at hospital",
     title: "QueueSmart",
     slogan: "Digital Queue Management Made Easy",
     buttonText: "Join Queue Virtually"
   },
   { 
-    src: "/images/Qtracker bannner (4)", 
+    src: "/images/Quere-management-final.png", 
     alt: "Customer getting served efficiently",
     title: "QueueSmart",
     slogan: "Smart Solutions for Busy Businesses",
