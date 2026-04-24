@@ -1,5 +1,6 @@
 package com.example.queue_token_app.controller;
 
+import com.example.queue_token_app.dto.QueueStatusResponse;
 import com.example.queue_token_app.entity.QueueEntry;
 
 import com.example.queue_token_app.service.AutomaticTokenAssinement.QueueService;

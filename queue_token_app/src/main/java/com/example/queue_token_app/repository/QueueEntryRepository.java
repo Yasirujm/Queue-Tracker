@@ -20,4 +20,6 @@ public interface QueueEntryRepository extends JpaRepository<QueueEntry, Long> {
 
     @Repository
     public interface ServiceRepository extends JpaRepository<Service, Long> {}
+
+    
 }

@@ -1,3 +1,4 @@
+package com.example.queue_token_app.dto;
 public class QueueStatusResponse {
     private long queueId;
     private int currentToken;
