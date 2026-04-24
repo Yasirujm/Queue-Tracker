@@ -1,0 +1,31 @@
+/* Tailwind v4 already included. This file lets you tweak CSS variables or add small utilities. */
+:root {
+  color-scheme: light;
+}
+
+/* Design tokens */
+:root {
+  --radius: 1rem;
+}
+
+/* Tailwind helpers */
+.bg-background {
+  background-color: rgb(255, 255, 255);
+  background-image: url('/images/logo/lily\ background.png'); /* adjust path as needed */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.text-foreground { color: rgb(18 18 18); }
+.text-muted-foreground { color: rgb(107 114 128); }
+.bg-muted { background-color: rgb(230, 248, 255); }
+.border { border: 1px solid rgb(229 231 235); }
+.rounded-2xl { border-radius: 1rem; }
+.rounded-3xl { border-radius: 1.5rem; }
+
+/* Optional: focus styles */
+:where(a, button, input, select, textarea):focus-visible {
+  outline: 2px solid rgb(80, 153, 243);
+  outline-offset: 2px;
+}
