@@ -26,4 +26,5 @@ public class QueueService {
 
         return queueEntryRepository.save(entry);
     }
+
 }

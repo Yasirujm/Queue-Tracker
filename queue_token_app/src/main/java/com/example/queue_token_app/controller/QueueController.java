@@ -21,4 +21,12 @@ public class QueueController {
         QueueEntry entry = queueService.joinQueue(queueId, userId);
         return ResponseEntity.ok(entry);
     }
+
+    @GetMapping("/{queueId}/status")
+    public ResponseEntity<QueueStatusResponse> getStatus(
+            @PathVariable long queueId,
+            @RequestParam long userId
+    ) {
+        return ResponseEntity.ok(queueService.getQueueStatus(queueId, userId));
+    }
 }
