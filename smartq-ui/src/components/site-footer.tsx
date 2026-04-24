@@ -115,7 +115,7 @@ export default function SiteFooter() {
 
       {/* Bottom copyright */}
       <div className="border-t border-gray-700 py-4 text-center text-sm text-gray-400">
-        © {new Date().getFullYear()} LilyLanka. All rights reserved.
+        © {new Date().getFullYear()} Queue Smart. All rights reserved.
       </div>
     </footer>
   );

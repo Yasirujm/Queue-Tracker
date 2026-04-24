@@ -30,7 +30,7 @@ const HOTELS: Hotel[] = [
     rating: 4.6,
     reviews: 312,
     priceFrom: "USD 89",
-    image: "/images/hotels/Marino-Beach-Colombo.jpg",
+    image: "/images/hotels/Cinnamon-Bey-Beruwala.jpg",
     href: "/hotels/ocean-vista",
   },
   {

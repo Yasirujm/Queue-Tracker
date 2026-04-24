@@ -16,21 +16,21 @@ type Slide = {
 
 const SLIDES: Slide[] = [
   { 
-    src: "/public/images/Qtracker bannner (1).png", 
+    src: "/images/Qtracker bannner (4)", 
     alt: "People waiting in organized queue",
     title: "QueueSmart",
     slogan: "Skip The Line, Save Your Time",
     buttonText: "Book Token Now"
   },
   { 
-    src: "/public/images/Qtracker bannner (2).png", 
+    src: "/images/Qtracker bannner (4)", 
     alt: "Digital queue display at hospital",
     title: "QueueSmart",
     slogan: "Digital Queue Management Made Easy",
     buttonText: "Join Queue Virtually"
   },
   { 
-    src: "/public/images/Qtracker bannner (3).png", 
+    src: "/images/Qtracker bannner (4)", 
     alt: "Customer getting served efficiently",
     title: "QueueSmart",
     slogan: "Smart Solutions for Busy Businesses",
@@ -98,9 +98,9 @@ export default function QueueHero() {
               fill
               priority={i === 0}
               sizes="100vw"
-              className="object-cover mix-blend-overlay opacity-70"
+              className="object-cover mix-blend-overlay opacity-100"
             />
-            <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-blue-900/90 via-blue-900/50 to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-blue-900/40 via-blue-900/70 to-transparent" />
           </div>
         ))}
 

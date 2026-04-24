@@ -7,7 +7,7 @@ const PROMOTIONS = [
     title: "First Token Free",
     text: "New users get their first queue token absolutely free! No booking charges for first-time customers.",
     link: "/promotions/first-token-free",
-    image: "/images/promotions/free-token.jpg",
+    image: "/images/promotions/hotel.jpg",
     code: "FIRSTFREE",
     expires: "Dec 31, 2024",
     discount: "100% OFF"
@@ -16,7 +16,7 @@ const PROMOTIONS = [
     title: "Weekend Special",
     text: "Book tokens on weekends and get 20% off on service charges. Perfect for weekend errands!",
     link: "/promotions/weekend-special",
-    image: "/images/promotions/weekend-special.jpg",
+    image: "/images/promotions/hotel.jpg",
     code: "WEEKEND20",
     expires: "Ongoing",
     discount: "20% OFF"
@@ -25,7 +25,7 @@ const PROMOTIONS = [
     title: "Health Day Discount",
     text: "Special 30% discount on hospital and clinic tokens every Wednesday. Stay healthy, save money!",
     link: "/promotions/health-day",
-    image: "/images/promotions/health-discount.jpg",
+    image: "/images/promotions/hotel.jpg",
     code: "HEALTH30",
     expires: "Dec 31, 2024",
     discount: "30% OFF"
@@ -34,7 +34,7 @@ const PROMOTIONS = [
     title: "Family Package",
     text: "Book tokens for your entire family and get 25% off. Perfect for family outings and appointments.",
     link: "/promotions/family-package",
-    image: "/images/promotions/family-package.jpg",
+    image: "/images/promotions/hotel.jpg",
     code: "FAMILY25",
     expires: "Ongoing",
     discount: "25% OFF"
@@ -43,7 +43,7 @@ const PROMOTIONS = [
     title: "Early Bird Offer",
     text: "Book tokens before 10 AM and enjoy 15% off on all service charges. Beat the rush!",
     link: "/promotions/early-bird",
-    image: "/images/promotions/early-bird.jpg",
+    image: "/images/promotions/hotel.jpg",
     code: "EARLY15",
     expires: "Ongoing",
     discount: "15% OFF"
@@ -52,7 +52,7 @@ const PROMOTIONS = [
     title: "Student Special",
     text: "Students get 40% off on all queue tokens. Valid student ID required at service point.",
     link: "/promotions/student-offer",
-    image: "/images/promotions/student-offer.jpg",
+    image: "/images/promotions/hotel.jpg",
     code: "STUDENT40",
     expires: "Dec 31, 2024",
     discount: "40% OFF"
