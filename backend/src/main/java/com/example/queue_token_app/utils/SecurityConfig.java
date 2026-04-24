@@ -49,6 +49,9 @@ public class SecurityConfig {
                         // All other endpoints require authentication
                         .anyRequest().authenticated()
                 )
+                .csrf(csrf -> csrf.disable())
+                .cors(cors -> cors.configure(http))
+                .authorizeHttpRequests(auth -> auth.anyRequest().permitAll()) // allow everything
                 .sessionManagement(session ->
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 );
